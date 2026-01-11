@@ -81,6 +81,14 @@ pengchaoma@pengchaos-MacBook-Pro backend % npm run dev
 [nodemon] starting `node server.js`
 Server is running on port 5001
 ```
+- Add the start command in package.json scripts
+```shell
+"scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+```
+
 
 
 
