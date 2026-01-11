@@ -52,9 +52,9 @@ Thumbs.db
 *.app
 
 # MongoDB data directories
-mongodb/data/
-mongodb/config/
-mongodb/init/
+mongodb/data/*
+mongodb/config/*
+mongodb/init/*
 
 # Docker related files
 *.log
