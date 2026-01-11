@@ -148,6 +148,46 @@ docker-compose exec mongodb mongosh
   config   12.00 KiB
   local    72.00 KiB
   ```
+- Use postman to have a test for example test the create post function
+
+  ![post_test](./post_test.png)
+
+- Go to mongodb to check the data
+  ```shell
+  admin> show dbs
+  admin       100.00 KiB
+  config      108.00 KiB
+  local        64.00 KiB
+  mydatabase   40.00 KiB 
+  ```
+- Switch to mydatabase
+  ```shell
+  use mydatabase
+  ```
+- Check the collection
+  ```shell
+  mydatabase> show collections
+  notes
+  ```
+- Check all the Documents in notes collection
+  ```shell
+  db.notes.find()
+  ```
+  - then you can find all the documents like this
+  ```shell
+  [
+  {
+    _id: ObjectId('6963a123d9d605fd0fddb1f6'),
+    title: 'what a beautiful day',
+    content: 'Today I have go to the library to learn some cpp programing language',
+    createdAt: ISODate('2026-01-11T13:09:55.334Z'),
+    updatedAt: ISODate('2026-01-11T13:09:55.334Z'),
+    __v: 0
+  }
+  ]
+  ```
+  
+
 
 
 
