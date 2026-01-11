@@ -67,6 +67,20 @@ npm install nodemon -D
     "dev": "nodemon server.js"
   },
 ```
+- you can see the server now is running using nodemon
+```shell
+pengchaoma@pengchaos-MacBook-Pro backend % npm run dev
+
+> backend@1.0.0 dev
+> nodemon server.js
+
+[nodemon] 3.1.11
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node server.js`
+Server is running on port 5001
+```
 
 
 
