@@ -1,7 +1,0 @@
-exit
-show dbs
-use admin
-exit
-show dbs
-show dbs;
-db.createUser({ user: "admin", pwd: "secret", roles: [{ role: 'root', db: "admin" }] })
