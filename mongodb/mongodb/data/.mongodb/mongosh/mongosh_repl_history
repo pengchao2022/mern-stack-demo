@@ -1,3 +1,4 @@
+show dbs
 use admin
 exit
 show dbs

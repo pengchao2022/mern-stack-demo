@@ -141,6 +141,15 @@ docker-compose exec mongodb mongosh
    admin> db.auth("admin", "secret")
     { ok: 1 }
    ```
+- check the databases in mongodb
+  ```shell
+  admin> show dbs
+admin   100.00 KiB
+config   12.00 KiB
+local    72.00 KiB
+admin> 
+  ```
+  
 
 
 

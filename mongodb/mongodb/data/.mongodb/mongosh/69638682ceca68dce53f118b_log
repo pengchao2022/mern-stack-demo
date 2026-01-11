@@ -27,3 +27,4 @@
 {"t":{"$date":"2026-01-11T11:17:28.200Z"},"s":"I","c":"DEVTOOLS-CONNECT","id":1000000042,"ctx":"mongosh-connect","msg":"Initiating connection attempt","attr":{"uri":"mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.10","driver":{"name":"nodejs|mongosh","version":"6.19.0|2.5.10"},"devtoolsConnectVersion":"3.9.4","host":"127.0.0.1:27017"}}
 {"t":{"$date":"2026-01-11T11:17:28.201Z"},"s":"I","c":"DEVTOOLS-CONNECT","id":1000000035,"ctx":"mongosh-connect","msg":"Server heartbeat succeeded","attr":{"connectionId":"127.0.0.1:27017"}}
 {"t":{"$date":"2026-01-11T11:17:28.206Z"},"s":"I","c":"DEVTOOLS-CONNECT","id":1000000037,"ctx":"mongosh-connect","msg":"Connection attempt finished"}
+{"t":{"$date":"2026-01-11T11:24:45.272Z"},"s":"I","c":"MONGOSH","id":1000000009,"ctx":"shell-api","msg":"Used \"show\" command","attr":{"method":"show dbs"}}
