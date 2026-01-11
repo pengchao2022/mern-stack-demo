@@ -216,6 +216,12 @@ docker-compose exec mongodb mongosh
 
   ![wrong_id](./wrong_id.png)
 
+- deleteNotes function test
+
+  ![delete_test](./delete_test.png)
+
+  
+
 
 
 
