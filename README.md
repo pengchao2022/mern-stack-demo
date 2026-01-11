@@ -128,13 +128,11 @@ docker-compose exec mongodb mongosh
 ```
 - type the authentication information
   - switch to admin database for auth
-    ```shell
+  ```shell
     use admin
-    ```
+  ```
  - credential verification
    ```shell
-   db.auth("admin", "secret")
-   ```
    db.auth("admin", "secret")
    ```
  - when result return 1 that means successfully login
@@ -144,7 +142,7 @@ docker-compose exec mongodb mongosh
     { ok: 1 }
    ```
 
-   
+
 
 
 
