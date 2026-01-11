@@ -55,7 +55,7 @@ from
     "dev": "node server.js"
   },
   ```
-
+- Remember that package.json file is in Backend folder, so you should go to backend directory to do that
 
 
 
