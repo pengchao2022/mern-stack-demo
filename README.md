@@ -148,6 +148,10 @@ docker-compose exec mongodb mongosh
   config   12.00 KiB
   local    72.00 KiB
   ```
+- Health check function postman test
+
+  ![health_check](./health_check.png)
+
 - getNotes function and use postman to have a test
  
   ![getNotes](./get_notes.png)
@@ -219,6 +223,12 @@ docker-compose exec mongodb mongosh
 - deleteNotes function test
 
   ![delete_test](./delete_test.png)
+
+- I also added getNoteByID function which can filter with ID number
+
+  ![getNoteByID](./getbyID.png)
+
+
 
 
 

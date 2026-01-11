@@ -1,5 +1,12 @@
 import Note from "../models/Note.js";
 
+
+// health check must be the first 
+export async function healthCheck(req, res) {
+  res.status(200).send('Server is UP, API is healthy, Welcome to my website, Designed and Developed by Pengchao Ma');
+}
+
+
 // async 是异步函数调用，可以使用 await 关键字
 // get
 export async function getAllNotes(req, res) {
@@ -57,6 +64,17 @@ export async function deleteNote(req, res) {
   }
 }
 
-export function healthCheck(req, res) {
-  res.status(200).send('the server is up now');
+// get note by id
+export async function getNoteById(req, res) {
+  try {
+    const note = await Note.findById(req.params.id);
+    if (!note) {
+      return res.status(404).send('Note not found');
+    }
+    res.status(200).json(note);
+  } catch (error) {
+    res.status(500).send('Server error');
+  }
 }
+
+

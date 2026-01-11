@@ -1,9 +1,13 @@
 import express from 'express';
-import { createNote, deleteNote, getAllNotes, healthCheck, updateNote } from '../controllers/notesController.js';
+import { createNote, deleteNote, getAllNotes, healthCheck, updateNote, getNoteById } from '../controllers/notesController.js';
 
 const router = express.Router();
 
+router.get('/health', healthCheck);
+
 router.get('/', getAllNotes);
+
+router.get('/:id', getNoteById);
 
 router.post('/', createNote);
 
@@ -11,7 +15,7 @@ router.put('/:id', updateNote);
 
 router.delete('/:id', deleteNote);
 
-router.get('/health', healthCheck);
+
 
 
 
