@@ -187,8 +187,17 @@ docker-compose exec mongodb mongosh
     createdAt: ISODate('2026-01-11T13:09:55.334Z'),
     updatedAt: ISODate('2026-01-11T13:09:55.334Z'),
     __v: 0
+  },
+  {
+    _id: ObjectId('6963a548e48d3e7b31067518'),
+    title: "Uncle tom's house",
+    content: "this is uncle tom's new house and paid for 4 million dollers!!",
+    createdAt: ISODate('2026-01-11T13:27:36.826Z'),
+    updatedAt: ISODate('2026-01-11T13:27:36.826Z'),
+    __v: 0
   }
   ]
+
   ```
 
 
