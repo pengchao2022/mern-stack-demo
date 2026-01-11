@@ -52,7 +52,7 @@ from
   to
   ```
   "scripts": {
-    "dev": "node backend/server.js"
+    "dev": "node server.js"
   },
   ```
 
