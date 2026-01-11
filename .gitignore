@@ -1,71 +1,117 @@
-# Compiled class file
+# ============================================
+# 语言和框架特定文件
+# ============================================
+
+# Java
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
 *.nar
 *.ear
-*.zip
-*.tar.gz
-*.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
-
-# for node js
+# Node.js
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+.pnpm-store/
 
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
+# TypeScript
 dist/
 build/
 out/
 *.tsbuildinfo
 
-logs
-*.log
+# ============================================
+# 环境变量和配置文件
+# ============================================
 
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ============================================
+# 日志和临时文件
+# ============================================
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ============================================
+# 操作系统文件
+# ============================================
+
+# macOS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-*.exe
-*.out
-*.app
+# Linux
+*~
 
-# MongoDB data directories
-mongodb/data/*
-mongodb/config/*
-mongodb/init/*
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Docker related files
-*.log
-.dockerignore
-Dockerfile
-docker-compose.override.yml
+# ============================================
+# IDE 和编辑器
+# ============================================
 
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
+# IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
 
-journal/
+# 其他编辑器
+*.swp
+*.swo
+*~
 
+# ============================================
+# 压缩文件
+# ============================================
+
+*.zip
+*.tar.gz
+*.rar
+
+# ============================================
+# MongoDB 数据文件
+# ============================================
+
+# MongoDB 数据目录（完整目录）
+mongodb/data/
+mongodb/config/
+mongodb/init/
+
+# MongoDB 数据文件扩展名
 *.wt
 *.lock
 *.turtle
@@ -73,6 +119,64 @@ journal/
 WiredTiger*
 mongod.lock
 sizeStorer.wt
+_mdb_catalog.wt
+collection-*.wt
+index-*.wt
+
+# MongoDB 日志和临时文件
+journal/
+diagnostic.data/
+
+# ============================================
+# Docker 相关
+# ============================================
+
+.dockerignore
+Dockerfile
+docker-compose.override.yml
+docker-compose.prod.yml
+
+# ============================================
+# 备份文件
+# ============================================
 
 *.bak
 *.backup
+*.old
+*.orig
+*.temp
+*.tmp
+.temp/
+tmp/
+
+# ============================================
+# 可执行文件
+# ============================================
+
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# ============================================
+# 测试相关
+# ============================================
+
+coverage/
+.nyc_output/
+
+# ============================================
+# 其他
+# ============================================
+
+# BlueJ
+*.ctxt
+
+# Mobile Tools for Java
+.mtj.tmp/
+
+# virtual machine crash logs
+hs_err_pid*
+replay_pid*
