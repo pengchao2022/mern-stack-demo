@@ -62,6 +62,10 @@ mongodb/init/*
 Dockerfile
 docker-compose.override.yml
 
+
+
+journal/
+
 *.wt
 *.lock
 *.turtle
