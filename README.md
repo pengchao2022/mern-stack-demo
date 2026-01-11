@@ -15,11 +15,11 @@ In this demo, I will write a  mern stack web-app from the very beginning.
 
 - R stands for React
 
-  A JavaScript library for building user interfaces, particularly single-page applications with reusable UI components.
+  - A JavaScript library for building user interfaces, particularly single-page applications with reusable UI components.
 
 - N stands for Node.js
   
-  A JavaScript runtime environment that executes JavaScript code outside a web browser, enabling server-side development.
+  - A JavaScript runtime environment that executes JavaScript code outside a web browser, enabling server-side development.
 
   
 
