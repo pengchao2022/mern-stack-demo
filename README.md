@@ -21,5 +21,9 @@ In this demo, I will write a  mern stack web-app from the very beginning.
   
   - A JavaScript runtime environment that executes JavaScript code outside a web browser, enabling server-side development.
 
-  
+## MERN architecture
+
+![mern](./mern.png)
+
+
 
