@@ -118,6 +118,10 @@ docker-compose up -d
 ```shell
 npm install mongoose@7.0.3
 ```
+- Install dotenv in backent directory
+```shell
+npm install dotenv
+```
 
 
 
