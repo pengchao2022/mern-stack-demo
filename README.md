@@ -38,6 +38,10 @@ npm install express@4.18.2
 ```shell
 touch server.js
 ```
+- Run the server
+```shell
+node server.js
+```
 
 
 
