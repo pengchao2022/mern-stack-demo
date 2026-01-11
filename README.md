@@ -148,9 +148,13 @@ docker-compose exec mongodb mongosh
   config   12.00 KiB
   local    72.00 KiB
   ```
-- Use postman to have a test for example test the create post function
+- getNotes function and use postman to have a test
+ 
+  ![getNotes](./get_notes.png)
 
-  ![post_test](./post_test.png)
+- create function and use postman to have a test
+
+  ![createNotes](./post_test.png)
 
 - Go to mongodb to check the data
   ```shell
@@ -186,7 +190,7 @@ docker-compose exec mongodb mongosh
   }
   ]
   ```
-  
+
 
 
 
