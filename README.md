@@ -122,7 +122,29 @@ npm install mongoose@7.0.3
 ```shell
 npm install dotenv
 ```
+- Connect mongodb using docker-compose
+```shell
+docker-compose exec mongodb mongosh
+```
+- type the authentication information
+  - switch to admin database for auth
+    ```shell
+    use admin
+    ```
+ - credential verification
+   ```shell
+   db.auth("admin", "secret")
+   ```
+   db.auth("admin", "secret")
+   ```
+ - when result return 1 that means successfully login
+   like this
+   ```shell
+   admin> db.auth("admin", "secret")
+    { ok: 1 }
+   ```
 
+   
 
 
 
