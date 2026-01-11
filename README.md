@@ -25,5 +25,21 @@ In this demo, I will write a  mern stack web-app from the very beginning.
 
 ![mern](./mern.png)
 
+## Usage
+- Initialize a Node JS applicaton
+```shell
+npm init -y
+```
+- Install express
+```shell
+npm install express@4.18.2
+```
+- Create server.js file
+```shell
+touch server.js
+```
+
+
+
 
 
