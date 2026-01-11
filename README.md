@@ -199,6 +199,23 @@ docker-compose exec mongodb mongosh
   ]
 
   ```
+- Now we test updateNotes function
+  - before we update
+
+  ![update_1](./update_1.png)
+
+  - Execute update with ID
+
+  ![update_2](./update_2.png)
+
+  - Check the update result
+
+  ![update_confirm](./update_confirm.png)
+
+- If the ID is wrong then we will get the error and notes not found
+  ![wrong_id](./wrong_id.png)
+
+  
 
 
 
