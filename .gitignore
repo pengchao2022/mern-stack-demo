@@ -50,3 +50,25 @@ Thumbs.db
 *.exe
 *.out
 *.app
+
+# MongoDB data directories
+mongodb/data/
+mongodb/config/
+mongodb/init/
+
+# Docker related files
+*.log
+.dockerignore
+Dockerfile
+docker-compose.override.yml
+
+*.wt
+*.lock
+*.turtle
+*.bson
+WiredTiger*
+mongod.lock
+sizeStorer.wt
+
+*.bak
+*.backup

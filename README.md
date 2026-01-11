@@ -88,6 +88,36 @@ Server is running on port 5001
     "start": "node server.js"
   },
 ```
+- Install mongodb using docker-compose
+```shell
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
+      MONGO_INITDB_DATABASE: mydatabase
+    volumes:
+      - ./mongodb/data:/data/db
+      - ./mongodb/init:/docker-entrypoint-initdb.d  # initialization script directory
+      - ./mongodb/config:/data/configdb
+    # Enable authentication (recommended for production environments)
+    command: ["--auth"]
+```
+- Run the docker-compose command
+```shell
+docker-compose up -d
+```
+- Install mongoose
+```shell
+npm install mongoose@7.0.3
+```
 
 
 
