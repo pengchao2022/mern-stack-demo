@@ -52,10 +52,23 @@ from
   to
   ```
   "scripts": {
-    "dev": "node server.js"
+    "dev": "nodemon server.js"
   },
   ```
 - Remember that package.json file is in Backend folder, so you should go to backend directory to do that
+
+- Install nodemon so that the server can refresh automatically
+```shell
+npm install nodemon -D
+```
+- then you also need to modify the package.json scripts and changed to nodemon
+```shell
+"scripts": {
+    "dev": "nodemon server.js"
+  },
+```
+
+
 
 
 
