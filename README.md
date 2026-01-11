@@ -1,7 +1,7 @@
 # Mern-stack-demo
 devops demo
 
-In this demo, I will write a  mern stack web-app from the very beginning.
+In this demo, I will write a  mern stack web-app from the very beginning. You will learn REST API crud and mongodb basic database operation and postman to test APIs and hopefully you will have a clear architecture of dynamic websites functions.
 
 ## MERN Definition
 
@@ -220,7 +220,7 @@ docker-compose exec mongodb mongosh
 
   ![delete_test](./delete_test.png)
 
-  
+
 
 
 
