@@ -42,6 +42,19 @@ touch server.js
 ```shell
 node server.js
 ```
+- If you want to run dev like "npm run dev", you need to modify the package.json file 
+from 
+```shell
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  ```
+  to
+  ```
+  "scripts": {
+    "dev": "node backend/server.js"
+  },
+  ```
 
 
 
