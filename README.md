@@ -336,6 +336,10 @@ Select a variant:
 
 ![vite_react](./vite_React.png)
 
+- Install React router
+```shell
+npm install react-router
+```
 
 
 
