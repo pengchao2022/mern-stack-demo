@@ -9,7 +9,7 @@ export const simpleRateLimit = async (req, res, next) => {
   
   try {
     // 使用 IP 地址标识用户
-    const userKey = `rate:${req.ip || 'unknown'}`;
+    const userKey = `ratelimit:${req.ip || 'unknown'}`;
     const client = redisClient.getClient();
     
     // 获取当前计数

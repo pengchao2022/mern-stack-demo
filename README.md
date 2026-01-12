@@ -260,6 +260,46 @@ Redis acts as a centralized counter in rate limiting, which is key to implementi
 
 ![rate_limits](./rate_limits.png)
 
+- I can also use shell script to have a test
+```shell
+pengchaoma@pengchaos-MacBook-Pro ~ % for i in {1..15}; do
+  echo -n "Request $i: "
+  curl -s http://localhost:5001/api/notes 2>/dev/null | head -c 50
+  echo ""
+  sleep 0.1
+done
+
+Request 1: [{"_id":"69645a38d96eb9feac7a1b17","title":"Animal
+Request 2: [{"_id":"69645a38d96eb9feac7a1b17","title":"Animal
+Request 3: [{"_id":"69645a38d96eb9feac7a1b17","title":"Animal
+Request 4: [{"_id":"69645a38d96eb9feac7a1b17","title":"Animal
+Request 5: [{"_id":"69645a38d96eb9feac7a1b17","title":"Animal
+Request 6: [{"_id":"69645a38d96eb9feac7a1b17","title":"Animal
+Request 7: [{"_id":"69645a38d96eb9feac7a1b17","title":"Animal
+Request 8: [{"_id":"69645a38d96eb9feac7a1b17","title":"Animal
+Request 9: [{"_id":"69645a38d96eb9feac7a1b17","title":"Animal
+Request 10: [{"_id":"69645a38d96eb9feac7a1b17","title":"Animal
+Request 11: {"error":"You have too many requests in a very sho
+Request 12: {"error":"You have too many requests in a very sho
+Request 13: {"error":"You have too many requests in a very sho
+Request 14: {"error":"You have too many requests in a very sho
+Request 15: {"error":"You have too many requests in a very sho
+```
+- then go to redis you can see the ratelimit key
+```shell
+127.0.0.1:6379> keys ratelimit:*
+1) "ratelimit:::1"
+
+```
+- check the TTL of the key
+```shell
+127.0.0.1:6379> TTL "ratelimit:::1"
+(integer) -2
+```
+
+
+
+
 
 
 
