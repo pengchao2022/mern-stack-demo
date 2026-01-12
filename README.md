@@ -245,6 +245,21 @@ redis-server    redis:7.0-alpine                "docker-entrypoint.s…"   redis
 
 ```
 - login to Redis to have a check
+```shell
+docker-compose exec redis redis-cli -a redis123
+```
+127.0.0.1:6379> keys *
+(empty array)
+```
+- Install necessary plugins
+```shell
+npm install express-rate-limit rate-limit-redis ioredis
+```
+- Test results of too many requests in a short period of time
+Redis acts as a centralized counter in rate limiting, which is key to implementing rate limiting across requests, servers, and time periods.
+
+![rate_limits](./rate_limits.png)
+
 
 
 
