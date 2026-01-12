@@ -14,6 +14,11 @@ connectDB();
 // use middleware to parse JSON request bodies
 app.use(express.json());
 
+// Custom logging middleware
+app.use((req, res, next) => {
+  console.log(`Request method is ${req.method} & Request URL is ${req.url}`);
+  next();
+});
 app.use("/api/notes", notesRoutes);
 
 app.listen(PORT, () => {

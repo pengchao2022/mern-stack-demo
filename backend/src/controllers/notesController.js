@@ -9,10 +9,10 @@ export async function healthCheck(req, res) {
 
 // async 是异步函数调用，可以使用 await 关键字
 // get
-export async function getAllNotes(req, res) {
+export async function getAllNotes(_, res) {
   try {
     
-    const notes = await Note.find();
+    const notes = await Note.find().sort({createdAt: -1}); // show newest sort by createdAt descending
     res.status(200).json(notes);
   } catch (error) {
     res.status(500).send('Server error');

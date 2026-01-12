@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.0-alpine
+    container_name: redis-server
+    restart: always
+    ports:
+      - "${REDIS_PORT}:6379"
+      - "8001:8001"  # Redis Insight UI port
+    environment:
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - REDIS_PORT=${REDIS_PORT}
+      - REDIS_DATABASES=16
+    volumes:
+      - ./redis-data:/data                  # 数据目录
+      - ./redis.conf:/usr/local/etc/redis/redis.conf  # 配置文件
+      - ./logs:/var/log/redis              # 日志目录
+    command: 
+      - redis-server
+      - /usr/local/etc/redis/redis.conf    # 使用自定义配置
+      - --requirepass ${REDIS_PASSWORD}    
+      - --maxmemory ${MAX_MEMORY}          # 限制内存
+      - --maxmemory-policy allkeys-lru     # 内存淘汰策略
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - app-network
+
+  redis-insight:  # Redis UI 
+    image: redislabs/redisinsight:latest
+    container_name: redis-insight
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./redisinsight:/data
+    depends_on:
+      redis:
+        condition: service_healthy
+        
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -228,6 +228,16 @@ docker-compose exec mongodb mongosh
 
   ![getNoteByID](./getbyID.png)
 
+## Middleware Rate Limitting Redis
+
+- We need to install Redis to prevent the server from overloading and crashing due to too many requests in a short period of time.
+
+- Install redis using docker-compose 
+```shell
+docker-compose up -d
+```
+
+
 
 
 
