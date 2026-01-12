@@ -1,0 +1,23 @@
+# Docker 数据卷
+redis-data/
+redisinsight/
+logs/
+
+# Redis 数据文件
+*.rdb
+*.aof
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# 临时文件
+*.log
+dump.rdb
+
+# 编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo

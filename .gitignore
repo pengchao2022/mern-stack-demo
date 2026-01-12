@@ -55,3 +55,9 @@ docker-compose.override.yml
 *.bak
 *.backup
 *.tmp
+
+# Redis related files
+/Redis/redis-data/
+/Redis/redisinsight/
+/Redis/logs/
+/Redis/.env
