@@ -296,6 +296,50 @@ Request 15: {"error":"You have too many requests in a very sho
 127.0.0.1:6379> TTL "ratelimit:::1"
 (integer) -2
 ```
+## Fronted vite React application
+
+- go to the backend folder and create a vite React application
+```shell
+npm create vite@latest .
+```
+- select React framework
+```shell
+Select a framework:
+│  ○ Vanilla
+│  ○ Vue
+│  ● React
+│  ○ Preact
+│  ○ Lit
+│  ○ Svelte
+│  ○ Solid
+│  ○ Qwik
+│  ○ Angular
+│  ○ Marko
+│  ○ Others
+```
+- select JavaScript
+```shell
+Select a variant:
+│  ○ TypeScript
+│  ○ TypeScript + React Compiler
+│  ○ TypeScript + SWC
+│  ● JavaScript
+│  ○ JavaScript + React Compiler
+│  ○ JavaScript + SWC
+│  ○ React Router v7 ↗
+│  ○ TanStack Router ↗
+│  ○ RedwoodSDK ↗
+│  ○ RSC ↗
+│  ○ Vike ↗
+```
+- when you type npm run dev you should see the vite + React page from http://localhost:5173/
+
+![vite_react](./vite_React.png)
+
+
+
+
+
 
 
 
