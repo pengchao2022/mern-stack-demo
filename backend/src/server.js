@@ -1,6 +1,7 @@
 import express from 'express';
 import notesRoutes from './routes/notesRoutes.js';
 import connectDB from './config/db.js';
+import connectRedis from './config/redisConnect.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -10,6 +11,9 @@ const PORT = process.env.PORT || 5001;
 
 // connect to database
 connectDB();
+
+// connect to redis
+connectRedis();
 
 // use middleware to parse JSON request bodies
 app.use(express.json());
