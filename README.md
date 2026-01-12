@@ -242,7 +242,10 @@ pengchaoma@pengchaos-MacBook-Pro Redis % docker-compose ps
 NAME            IMAGE                           COMMAND                  SERVICE         CREATED          STATUS                    PORTS
 redis-insight   redislabs/redisinsight:latest   "./docker-entry.sh n…"   redis-insight   24 seconds ago   Up 13 seconds             0.0.0.0:8001->8001/tcp, [::]:8001->8001/tcp
 redis-server    redis:7.0-alpine                "docker-entrypoint.s…"   redis           24 seconds ago   Up 24 seconds (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp, 0.0.0.0:8002->8001/tcp, [::]:8002->8001/tcp
+
 ```
+- login to Redis to have a check
+
 
 
 
