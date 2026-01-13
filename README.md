@@ -336,10 +336,19 @@ Select a variant:
 
 ![vite_react](./vite_React.png)
 
-- Install React router
+- Install React router dom
 ```shell
-npm install react-router
+npm install react-router-dom@6.20.0
 ```
+- Install react hot toast
+```shell
+npm install react-hot-toast
+```
+- Install ES7 React/Redux/GraphQL/React-Native snippets for vscode
+
+- Here is the website running looks like
+
+![note_website](./note_website.png)
 
 
 

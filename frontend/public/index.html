@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>笔记应用</title>
+    
+    <!-- 强制禁用缓存 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <!-- 立即执行的脚本，修复任何错误的 URL -->
+    <script>
+      (function() {
+        console.log('📄 index.html: 页面开始加载');
+        console.log('🌐 初始 URL:', window.location.href);
+        console.log('📍 初始路径:', window.location.pathname);
+        
+        // 存储原始 URL 用于调试
+        window._originalUrl = window.location.href;
+        window._originalPath = window.location.pathname;
+        
+        // 如果 URL 是 /note/undefined，立即修复
+        if (window.location.pathname === '/note/undefined') {
+          console.log('🚨 index.html: 检测到错误的 URL /note/undefined');
+          console.log('🔄 正在修复...');
+          
+          // 方法1: 使用 history.replaceState（最干净的方式）
+          window.history.replaceState({}, '', '/');
+          
+          // 方法2: 如果需要完全重载
+          // window.location.href = '/';
+          
+          console.log('✅ index.html: URL 已修复');
+          console.log('✅ 新 URL:', window.location.href);
+        }
+        
+        // 监听所有链接点击
+        document.addEventListener('click', function(e) {
+          const link = e.target.closest('a');
+          if (link && link.href) {
+            console.log('🔗 点击链接:', link.href);
+            console.log('🔗 链接路径:', new URL(link.href).pathname);
+          }
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- 添加一些调试信息到页面 -->
+    <div id="root"></div>
+    
+    <!-- 添加一个调试面板（隐藏的） -->
+    <div id="debug-panel" style="display: none; position: fixed; bottom: 10px; right: 10px; background: #f0f0f0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 12px; font-family: monospace;">
+      <div>URL: <span id="debug-url"></span></div>
+      <div>Path: <span id="debug-path"></span></div>
+      <button onclick="window.location.reload()">刷新</button>
+      <button onclick="window.location.href='/'">首页</button>
+    </div>
+    
+    <script>
+      // 显示调试面板
+      document.getElementById('debug-url').textContent = window.location.href;
+      document.getElementById('debug-path').textContent = window.location.pathname;
+      document.getElementById('debug-panel').style.display = 'block';
+    </script>
+    
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
