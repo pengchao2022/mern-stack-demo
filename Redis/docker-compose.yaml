@@ -5,7 +5,6 @@ services:
     restart: always
     ports:
       - "${REDIS_PORT}:6379"
-      - "8002:8001"  # Redis Insight UI port
     environment:
       - REDIS_PASSWORD=${REDIS_PASSWORD}
       - REDIS_PORT=${REDIS_PORT}
@@ -33,7 +32,7 @@ services:
     container_name: redis-insight
     restart: unless-stopped
     ports:
-      - "8001:8001"
+      - "8001:5540"
     volumes:
       - ./redisinsight:/data
     depends_on:
